@@ -1,17 +1,18 @@
 pipeline {
 
   environment {
-    registry = "192.168.1.81:5000/justme/myweb"
+    registry = "dannt94/hoctap"
+    registryCredential = 'dockerhub'
     dockerImage = ""
   }
 
-  agent any
+  agent { label "kubetest"}
 
   stages {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/justmeandopensource/playjenkins.git'
+        git 'https://github.com/dannt94/hoctap.git'
       }
     }
 
