@@ -12,7 +12,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/dannt94/hoctap.git'
+        git branch: 'main', url: 'https://github.com/dannt94/hoctap.git'
       }
     }
 
@@ -35,6 +35,7 @@ pipeline {
     }
 
     stage('Deploy App') {
+      agent { label "kubetest"}
       steps {
         script {
           kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "mykubeconfig")
