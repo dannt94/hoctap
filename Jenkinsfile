@@ -35,10 +35,10 @@ pipeline {
     }
 
     stage('Deploy App') {
-      agent { label "kubetest"}
+      agent { label "kubepod"}
       steps {
         script {
-          kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "mykubeconfig")
+          kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "kubepodID")
         }
       }
     }
