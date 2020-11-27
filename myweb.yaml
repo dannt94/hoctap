@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: dannt94/hoctap:1
+      - image: dannt94/hoctap:latest
         imagePullPolicy: Always
         name: myweb
 
