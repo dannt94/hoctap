@@ -15,7 +15,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        sh git clone https://github.com/dannt94/hoctap.git
+        sh 'git clone https://github.com/dannt94/hoctap.git'
       }
     }
 
