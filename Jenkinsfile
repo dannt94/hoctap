@@ -7,6 +7,9 @@ pipeline {
   }
 
   agent { label "kubetest"}
+  tools {
+    git 'git'
+    }
 
   stages {
 
