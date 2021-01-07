@@ -38,7 +38,7 @@ pipeline {
       agent { label "kubetest"}
       steps {
         script {
-          kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "kubetest")
+          kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "kube")
         }
       }
     }
