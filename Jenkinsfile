@@ -6,7 +6,7 @@ pipeline {
     dockerImage = ""
   }
 
-  agent {label "kubetest"}
+  agent any
 
   stages {
 
